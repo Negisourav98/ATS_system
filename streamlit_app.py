@@ -21,6 +21,10 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+
+if os.environ.get("IS_AZURE") != "1":
+    load_dotenv()
+
 # Load Gemini API key from environment variable
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
